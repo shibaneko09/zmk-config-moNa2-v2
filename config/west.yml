@@ -18,7 +18,7 @@ manifest:
     # ── ZMK 本体は cormoran さんの DYA Studio 対応 fork に切替 ──
     - name: zmk
       remote: cormoran
-      revision: v0.3-branch+dya
+      revision: 4493783ef88ce2e653bf8217c92ee17140df71e3  # pin: v0.3-branch+dya (2026-05-04)
       import: app/west.yml
     # ── DYA Studio modules ──
     - name: zmk-module-ble-management
@@ -40,15 +40,15 @@ manifest:
     # ── 既存モジュール ──
     - name: zmk-pmw3610-driver
       remote: badjeff
-      revision: zmk-0.3
+      revision: 5c5af40de4d8cdf55dc63c4c5907af1e52da6a95  # pin: zmk-0.3 (2025-12-16)
     - name: zmk-driver-paw3222
       remote: sekigon-gonnoc
-      revision: main
+      revision: df652881be2520bde4f64ab6ca35e4c5708f4f9b  # pin: main (2026-02-22)
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: v0.3
+      revision: 8756cb7b8114069fa3c25c6f6c990f24988fceff  # pin: v0.3 (2026-02-16)
     - name: zmk-input-processor-keybind
       remote: zettaface
-      revision: main
+      revision: 64303bd3932bfa7f49261fc6d0c9a3fdd06f8271  # pin: main (2025-07-24)
   self:
     path: config

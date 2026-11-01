@@ -1,5 +1,13 @@
 # moNa2 v2 (DYA Studio 対応版)
 
+> [!NOTE]
+> **このforkでの変更点**（[sayu-hub/zmk-config-moNa2-v2](https://github.com/sayu-hub/zmk-config-moNa2-v2) からの差分）
+>
+> - **COROPIT**：PMW3610版は元リポジトリの設定（`invert-x` のみ有効）をそのまま使います。カーソルの上下が逆の場合は、DYA Studio の `mouse` 設定で Y 反転を切り替えてください。PAW3222版にはドライバ側の軸反転設定がないため、向きが合わない場合は同じく `mouse` 設定の X/Y 反転で調整します。
+> - **トラックボールスクロール**：スクロールレイヤー（`SCRL_W` / `SCRL_M`）では縦横どちらにもスクロールします。向きは torabo-tsuki-lp の初期設定に合わせ、縦スクロールを反転しています（`mona2_r.overlay` の `y-invert`）。好みに合わない場合は DYA Studio の `scroll` 設定で X/Y 反転を切り替えられます。
+> - **依存の固定**：`config/west.yml` の可変ブランチ指定（`v0.3-branch+dya`、`main` など）を、動作確認済みのコミットに固定しています。
+> - 書き込むファイル：右手（トラックボール側）は `mona2_r-pmw3610.uf2` か `mona2_r-paw3222.uf2` のうちセンサーに合う方、左手は名前が `mona2_l` で始まる uf2 です（`mona2_r-logging` はデバッグ用なので通常は使いません）。DYA Studio で保存した設定は右手の Flash に残るため、初期値に戻したい場合は `settings_reset` を書き込んでください。
+
 このリポジトリは [moNa2 v2](https://github.com/sayu-hub/zmk-config-moNa2) 用 ZMK Config を、[cormoran](https://github.com/cormoran) さんが公開している **[DYA Studio](https://studio.dya.cormoran.works/)** に対応させたものです。
 
 DYA Studio は ZMK Studio をベースに、

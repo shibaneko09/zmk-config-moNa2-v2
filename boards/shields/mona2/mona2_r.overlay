@@ -82,15 +82,15 @@
                      DYA Studio から変更可能(再ビルド不要)
    ・xy-to-scroll-enabled : REL_X→HWHEEL, REL_Y→WHEEL に変換
                             こちらも Studio から ON/OFF 可能
-   ・y-invert : 縦スクロールの向きを torabo-tsuki-lp の初期設定に揃える
-                (横=カーソルと同じ向き / 縦=カーソルと逆向き)
+   ・x-invert : 縦横のスクロール方向を揃える
+                (横=カーソルと逆向き / 縦=カーソルと同じ向き。macOS 実機で確認した向き)
                 Studio の scroll 設定から X/Y それぞれ反転を切替可能
    ────────────────────────────────────────────────────── */
 &scroll_runtime_input_processor {
     x-codes = <INPUT_REL_X>;
     y-codes = <INPUT_REL_Y>;
     xy-to-scroll-enabled;
-    y-invert;
+    x-invert;
     active-layers = <0x000000C0>;  /* layer6 + layer7 */
     scale-multiplier = <1>;
     scale-divisor = <4>;            /* スクロール速度。大きいほど遅い。Studioで調整可 */
